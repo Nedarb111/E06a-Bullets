@@ -94,6 +94,9 @@ class Window(arcade.Window):
                 b.kill()
                 if e.hp <= 0:
                     e.kill()
+                    self.score = self.score + KILL_SCORE
+                else:
+                        self.score = self.score + HIT_SCORE
 
     def on_draw(self):
         arcade.start_render()
